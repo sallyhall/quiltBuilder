@@ -1,11 +1,10 @@
 @import "_variables";
 body{
-  margin:0px;
-  padding:0px;
+  margin:0;
+  padding:0;
   background-image: url("../quilt.jpg");
   background-size: cover;
 }
-
 
 html {
   -webkit-box-sizing: border-box;
@@ -50,7 +49,7 @@ nav{
   text-align: center;
   width: 65%;
   margin: auto;
-  height: 393px;
+  height: 653px;
   overflow: scroll;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 30px 10px;
@@ -92,7 +91,7 @@ article{
   background-color: white;
 }
 .quilt{
-  width: 33%;
+  width: 25%;
   display: inline-block;
   vertical-align: top;
 }
