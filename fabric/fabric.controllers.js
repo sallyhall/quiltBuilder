@@ -36,7 +36,8 @@
         var newFabric = {
           title: fabric.name,
           image: fabric.thumbnail_url,
-          description: fabric.short_description
+          description: fabric.short_description,
+          url: "http://www.spoonflower.com/fabric/"+fabric.id
         };
         FabricService.addFabricToQuilt(newFabric);
       };
@@ -45,7 +46,8 @@
         var newFabric = {
           title: fabric.title,
           image: fabric.image,
-          description: fabric.description
+          description: fabric.description,
+          url: fabric.url
         };
         FabricService.addFabricToQuilt(newFabric);
       };

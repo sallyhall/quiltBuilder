@@ -7,7 +7,7 @@
 
       var quiltUrl = "http://tiny-tiny.herokuapp.com/collections/quilt";
       var etsyUrl = function(searchTerm){
-        return "https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&api_key=eib9qc9hwzdss4dg26z6tpcb&path=craft-supplies.sewing-quilting-needle-crafts.fabric&keywords="
+        return "https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&api_key=eib9qc9hwzdss4dg26z6tpcb&category=Supplies/Fabric/Yardage&keywords="
                 + searchTerm
                 + "&callback=JSON_CALLBACK";
       }
