@@ -1,28 +1,31 @@
 <div class="container">
-  <form action="" class="etsySearch">
-    <input type="text" name="etsyKeyword" value="Search Etsy" ng-model = "keyword" placeholder="Search Etsy....">
-    <a href=""><input type="button" name="etsySubmit" ng-click="searchEtsy(keyword)" value="Search Etsy"></a>
-    <a href=""><input type="button" name="spoonflowerSubmit" ng-click="searchSpoonflower(keyword)" value="Search Spoonflower"></a>
-    <a href=""><input type="button" name="bothSubmit" ng-click="search(keyword)" value="Search Both"></a>
-  </form>
+  <div class="mainContent">
+    <form action="" class="etsySearch">
+      <input type="text" name="etsyKeyword" value="Search Etsy" ng-model = "keyword" placeholder="Search Etsy....">
+      <a href=""><input type="button" name="etsySubmit" ng-click="searchEtsy(keyword)" value="Search Etsy"></a>
+      <a href=""><input type="button" name="spoonflowerSubmit" ng-click="searchSpoonflower(keyword)" value="Search Spoonflower"></a>
+      <a href=""><input type="button" name="bothSubmit" ng-click="search(keyword)" value="Search Both"></a>
+    </form>
 
-  <div class="fabricList">
-    <h2>Etsy Fabrics</h2>
-    <article class="quilt" ng-repeat="fabric in etsyFabrics">
-      <img src="{{fabric.image}}" alt="{{fabric.title}}" />
-      <h3 class="fabricName">{{fabric.title}}</h3>
-      <!-- <p class="description">{{fabric.short_description}}</p> -->
-      <input type="button" name="addToQuilt" ng-click = "addEtsyFabricToQuilt(fabric)" value="Add to Quilt">
-    </article>
-  </div>
+    <div class="fabricList">
+      <h2>Etsy Fabrics</h2>
+      <article class="quilt" ng-repeat="fabric in etsyFabrics">
+        <img src="{{fabric.image}}" alt="{{fabric.title}}" />
+        <h3 class="fabricName">{{fabric.title}}</h3>
+        <!-- <p class="description">{{fabric.short_description}}</p> -->
+        <input type="button" name="addToQuilt" ng-click = "addEtsyFabricToQuilt(fabric)" value="Add to Quilt">
+      </article>
+    </div>
 
-  <div class="fabricList">
-    <h2>Spoonflower Fabrics</h2>
-    <article ng-repeat="fabric in spoonflowerFabrics" class="quilt" >
-      <img src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
-      <h3 class="fabricName">{{fabric.name}}</h3>
-      <!-- <p class="description">{{fabric.short_description}}</p> -->
-      <input type="button" name="addToQuilt" ng-click = "addSpoonflowerFabricToQuilt(fabric)" value="Add to Quilt">
-    </article>
+    <div class="fabricList">
+      <h2>Spoonflower Fabrics</h2>
+      <article ng-repeat="fabric in spoonflowerFabrics" class="quilt" >
+        <img src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
+        <h3 class="fabricName">{{fabric.name}}</h3>
+        <!-- <p class="description">{{fabric.short_description}}</p> -->
+        <input type="button" name="addToQuilt" ng-click = "addSpoonflowerFabricToQuilt(fabric)" value="Add to Quilt">
+      </article>
+    </div>
+
   </div>
 </div>

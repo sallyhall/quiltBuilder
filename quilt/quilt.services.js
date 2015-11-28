@@ -39,8 +39,7 @@
         getQuiltFabric: getQuiltFabric,
         removeQuiltFabric: removeQuiltFabric,
         calculateYardage: calculateYardage,
-        updateQuiltFabric: updateQuiltFabric,
-        clearQuilt: clearQuilt
+        updateQuiltFabric: updateQuiltFabric
       };
 
     });

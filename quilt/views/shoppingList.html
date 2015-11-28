@@ -1,9 +1,11 @@
 <div class="container">
-  <article class="quilt" ng-repeat="fabric in quiltFabrics">
-    <a href="{{fabric.url}}">
-      <span class="fabricName">{{fabric.title}}</span>
-      <span class="fabicYardage">{{fabric.yardage}} Yards</span>
-    </a>
-    <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="X">
-  </article>
+  <div class="mainContent">
+    <p class="shoppingList" ng-repeat="fabric in quiltFabrics">
+      <a href="{{fabric.url}}">
+        <span class="fabricName">{{fabric.title}}</span>
+        <span class="fabicYardage">{{fabric.yardage}} Yards</span>
+      </a>
+      <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="X">
+    </p>
+  </div>
 </div>

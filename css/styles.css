@@ -1,6 +1,8 @@
 body {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  background-image: url("../quilt.jpg");
+  background-size: cover; }
 
 html {
   -webkit-box-sizing: border-box;
@@ -39,18 +41,53 @@ nav {
       margin: 15px; }
 
 .container {
-  width: 50%;
+  text-align: center;
+  width: 65%;
   margin: auto;
   height: 393px;
   overflow: scroll;
   font-family: 'Roboto Condensed', sans-serif;
-  padding: 30px 0; }
+  padding: 30px 10px; }
+  .container :after {
+    width: 65%;
+    margin: auto;
+    content: "";
+    background-color: white;
+    opacity: 0.05;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    height: cover; }
 
-.intro a {
+.intro {
+  width: 50%;
+  margin: auto;
   text-decoration: none;
-  color: black; }
+  color: white;
+  text-align: left; }
 
 .fabricList {
   width: 45%;
   display: inline-block;
   vertical-align: top; }
+
+article {
+  text-align: left;
+  height: 350px;
+  padding: 10px;
+  margin: 10px;
+  background-color: gray; }
+
+.quilt {
+  width: 33%;
+  display: inline-block;
+  vertical-align: top; }
+
+.shoppingList {
+  text-align: left; }
+  .shoppingList a {
+    text-decoration: none;
+    color: black; }
