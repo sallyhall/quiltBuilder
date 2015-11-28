@@ -1,7 +1,10 @@
 <div class="container">
-  <article class="quilt" ng-repeat="fabric in fabrics">
-    <img src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
-    <h3 class="fabricName">{{fabric.name}}</h3>
-    <p class="description">{{fabric.short_description}}</p>
+  <article class="quilt" ng-repeat="fabric in quiltFabrics">
+    <a href="{{fabric.url}}">
+      <img src="{{fabric.image}}" alt="{{fabric.title}}" />
+      <h3 class="fabricName">{{fabric.title}}</h3>
+      <p class="description">{{fabric.description}}</p>
+    </a>
+    <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="Remove from Quilt">
   </article>
 </div>

@@ -2,19 +2,16 @@
 
   <div class="fabricList">
     <h2>Etsy Fabrics</h2>
-    <article class="quilt" ng-repeat="fabric in etsyFabrics">
-      <img src="{{fabric.image}}" alt="{{fabric.title}}" />
+    <article ng-repeat="fabric in etsyFabrics"  class="quilt" >
+      <img src="{{fabric.MainImage.url_170x135}}" alt="{{fabric.title}}" />
       <h3 class="fabricName">{{fabric.title}}</h3>
-      <p class="description">{{fabric.short_description}}</p>
+      <p class="description">{{fabric.description}}</p>
     </article>
   </div>
 
   <div class="fabricList">
     <h2>Spoonflower Fabrics</h2>
     <article ng-repeat="fabric in spoonflowerFabrics" class="quilt" >
-      <p>
-        test paragraph
-      </p>
       <img src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
       <h3 class="fabricName">{{fabric.name}}</h3>
       <p class="description">{{fabric.short_description}}</p>
