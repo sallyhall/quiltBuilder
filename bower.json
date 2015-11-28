@@ -1,0 +1,18 @@
+{
+  "name": "quiltBuilder",
+  "homepage": "https://github.com/sallykingston/quiltBuilder",
+  "authors": [
+    "Sally Kingston <sally.a.kingston@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
