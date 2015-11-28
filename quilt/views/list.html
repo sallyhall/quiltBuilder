@@ -1,15 +1,19 @@
 <div class="container">
   <div class="mainContent">
+    <h2>Quilt Fabrics</h2>
     <div class="actions">
-      <a href="#/quilt/shoppingList">View Shopping List</a>
-      <input type="button" name="clearQuilt" ng-click = "clearQuilt()" value="Remove all Fabrics from Quilt">      
+      <a href="#/quilt/shoppingList">View Shopping List</a>    |
+      <a href = "#/quilt/" ng-click = "clearQuilt()" >Remove all Fabrics from Quilt</a>
     </div>
     <article class="quilt" ng-repeat="fabric in quiltFabrics">
       <img src="{{fabric.image}}" alt="{{fabric.title}}" />
-      <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title}}</h3></a>
-      <a href="#/quilt/{{fabric._id}}">Set Quantity</a>
-      <!-- <p class="description">{{fabric.description}}</p> -->
-      <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="Remove from Quilt">
+      <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title | limitTo: 40}}</h3></a>
+      <div class="actions">
+        <a href="#/quilt/{{fabric._id}}">Set Quantity</a>    |
+        <a  ng-click = "removeQuiltFabric(fabric)" >
+          <i class="fa fa-trash"></i>
+        </a>
+      </div>
     </article>
   </div>
 </div>

@@ -1,11 +1,14 @@
 <div class="container">
   <div class="mainContent">
+    <h3>Shopping List</h3>
     <p class="shoppingList" ng-repeat="fabric in quiltFabrics">
-      <a href="{{fabric.url}}">
-        <span class="fabricName">{{fabric.title}}</span>
-        <span class="fabicYardage">{{fabric.yardage}} Yards</span>
+      <a href = "#/quilt/shoppingList" ng-click = "removeQuiltFabric(fabric)" >
+        <i class="fa fa-trash"></i>
       </a>
-      <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="X">
+      <a href="{{fabric.url}}">
+        <span class="fabricName">{{fabric.title | limitTo: 35}}</span>
+        <span ng-if="fabric.yardage" class="fabicYardage">{{fabric.yardage}} Yards</span>
+      </a>
     </p>
   </div>
 </div>

@@ -9,7 +9,6 @@
         QuiltService.getQuiltFabrics().success(function(fabrics){
           $scope.quiltFabrics = fabrics;
           if($routeParams.fabricID){
-            console.log("fabricID",$routeParams.fabricID);
             $scope.fabric = QuiltService.getQuiltFabric($scope.quiltFabrics,$routeParams.fabricID);
           }
         });
@@ -26,6 +25,9 @@
       $scope.calculateYardage = function(fabric, height, width, num){
         fabric.yardage = QuiltService.calculateYardage(height, width, num);
         QuiltService.updateQuiltFabric(fabric);
+        $scope.width="";
+        $scope.height="";
+        $scope.num="";
       };
 
       $scope.clearQuilt = function(){

@@ -15,6 +15,7 @@
           });
           $scope.etsyFabrics = fabrics.results;
         });
+        $scope.keyword = "";
       }
       $scope.searchEtsy = function (keyword) {
         FabricService.searchEtsy(keyword).success(function(fabrics){
@@ -23,13 +24,14 @@
           });
           $scope.etsyFabrics = fabrics.results;
         });
+        $scope.keyword = "";
       };
 
       $scope.searchSpoonflower = function(keyword){
         FabricService.searchSpoonflower(keyword).success(function(fabrics){
           $scope.spoonflowerFabrics = fabrics.results[0].results;
-
         });
+        $scope.keyword = "";
       };
 
       $scope.addSpoonflowerFabricToQuilt = function(fabric){

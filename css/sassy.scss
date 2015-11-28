@@ -33,10 +33,6 @@ nav{
     margin: auto;
     text-align: right;
   }
-  a{
-    text-decoration: none;
-    color: black;
-  }
   .nav-items{
     width: 75%;
     text-align: right;
@@ -90,10 +86,10 @@ nav{
 
 article{
   text-align: left;
-  height: 350px;
+  height: 300px;
   padding: 10px;
   margin: 10px;
-  background-color: gray;
+  background-color: white;
 }
 .quilt{
   width: 33%;
@@ -102,9 +98,47 @@ article{
 }
 
 .shoppingList{
+  width: 60%;
+  margin: 20px auto;
   text-align: left;
-  a{
-    text-decoration: none;
-    color:black;
+  border-bottom: 1px solid gray;
+  span, i{
+    margin-right: 15px;
   }
+}
+
+a{
+  text-decoration: none;
+  color:black;
+}
+
+.actions{
+  padding: 5px;
+  border: 1px solid black;
+  input{
+    margin: 15px auto;
+    display: block;
+  }
+  a{
+    margin: 15px;
+  }
+}
+
+img{
+  height: 173px;
+  width: 173px;
+}
+.fabricDetail{
+  width: 40%;
+  margin: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+.calculateYardage, .shoppingList{
+  border: 1px solid black;
+  padding: 2px;
+  margin: 5px auto;
+}
+.fabicYardage{
+  float: right;
 }
