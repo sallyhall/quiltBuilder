@@ -1,0 +1,15 @@
+<div class="container">
+  <article class="fabricDetail">
+    <img src="{{fabric.image}}" alt="{{fabric.title}}" />
+    <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title}}</h3></a>
+    <p class="description">{{fabric.description}}</p>
+    <input type="button" name="deleteFromQuilt" ng-click = "removeQuiltFabric(fabric)" value="Remove from Quilt">
+    <div class="yardageForm">
+      <input type="text" name="width" ng-model="width" placeholder="Width">
+      <input type="text" name="height" ng-model="height" placeholder="Height">
+      <input type="text" name="num" ng-model="num" placeholder="Number of Squares">
+      <input type="button" ng-click = "calculateYardage(fabric, height, width, num)" name="calculateYardage" value="Calculate Yardage">  
+    </div>
+    <h2 class="yardage">{{fabric.yardage}} Yards Needed</h2>
+  </article>
+</div>

@@ -11,7 +11,7 @@
     <article class="quilt" ng-repeat="fabric in etsyFabrics">
       <img src="{{fabric.image}}" alt="{{fabric.title}}" />
       <h3 class="fabricName">{{fabric.title}}</h3>
-      <p class="description">{{fabric.short_description}}</p>
+      <!-- <p class="description">{{fabric.short_description}}</p> -->
       <input type="button" name="addToQuilt" ng-click = "addEtsyFabricToQuilt(fabric)" value="Add to Quilt">
     </article>
   </div>
@@ -21,7 +21,7 @@
     <article ng-repeat="fabric in spoonflowerFabrics" class="quilt" >
       <img src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
       <h3 class="fabricName">{{fabric.name}}</h3>
-      <p class="description">{{fabric.short_description}}</p>
+      <!-- <p class="description">{{fabric.short_description}}</p> -->
       <input type="button" name="addToQuilt" ng-click = "addSpoonflowerFabricToQuilt(fabric)" value="Add to Quilt">
     </article>
   </div>

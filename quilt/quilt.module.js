@@ -11,6 +11,14 @@
       .when('/quilt',{
         templateUrl:'quilt/views/list.html',
         controller: 'QuiltController'
+      })
+      .when('/quilt/shoppingList',{
+        templateUrl: 'quilt/views/shoppingList.html',
+        controller: 'QuiltController'
+      })
+      .when('/quilt/:fabricID',{
+        templateUrl: 'quilt/views/detail.html',
+        controller: 'QuiltController'
       });
     });
 

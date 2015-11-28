@@ -8,7 +8,10 @@
       var loadFabrics = function(){
         QuiltService.getQuiltFabrics().success(function(fabrics){
           $scope.quiltFabrics = fabrics;
-          console.log("fabrics: ",$scope.quiltFabrics);
+          if($routeParams.fabricID){
+            console.log("fabricID",$routeParams.fabricID);
+            $scope.fabric = QuiltService.getQuiltFabric($scope.quiltFabrics,$routeParams.fabricID);
+          }
         });
       };
 
@@ -19,6 +22,19 @@
           loadFabrics();
         });
       };
+
+      $scope.calculateYardage = function(fabric, height, width, num){
+        fabric.yardage = QuiltService.calculateYardage(height, width, num);
+        QuiltService.updateQuiltFabric(fabric);
+      };
+
+      $scope.clearQuilt = function(){
+        _.each($scope.quiltFabrics, function(fabric){
+          $scope.removeQuiltFabric(fabric);
+        });
+      };
+
+
 
     });
 
