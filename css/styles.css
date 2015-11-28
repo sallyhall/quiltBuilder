@@ -1,0 +1,55 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+nav {
+  padding: 10px;
+  background-color: #62BBC1;
+  width: 100%;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 1.5em; }
+  nav .brand {
+    float: left;
+    margin-top: 5px; }
+  nav .topNav, nav .bottomNav {
+    width: 85%;
+    margin: auto;
+    text-align: right; }
+  nav a {
+    text-decoration: none;
+    color: black; }
+  nav .nav-items {
+    width: 75%;
+    text-align: right;
+    display: inline-block; }
+    nav .nav-items a {
+      list-style-type: none;
+      font-size: .5em;
+      display: inline-block;
+      margin: 15px; }
+
+.container {
+  width: 50%;
+  margin: auto;
+  height: 393px;
+  overflow: scroll;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 30px 0; }
+
+.intro a {
+  text-decoration: none;
+  color: black; }
+
+.fabricList {
+  width: 45%;
+  display: inline-block; }
