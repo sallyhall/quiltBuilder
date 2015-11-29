@@ -53,27 +53,16 @@ nav{
   overflow: scroll;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 30px 10px;
-  :after{
-    width: 65%;
-    margin:auto;
-    content: "";
-    background-color: white;
-    opacity: 0.05;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    height:cover;
-  }
+  background: rgba(255,255,255, 0.5);
+
 }
 
 .intro{
   width:50%;
+  padding-top: 50px;
   margin: auto;
   text-decoration: none;
-  color: white;
+  color: black;
   text-align:left;
 }
 
