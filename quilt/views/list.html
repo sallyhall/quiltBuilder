@@ -5,12 +5,12 @@
       <a href="#/quilt/shoppingList">View Shopping List</a>    |
       <a href = "#/quilt/" ng-click = "clearQuilt()" >Remove all Fabrics from Quilt</a>
     </div>
-    <article class="quilt" ng-repeat="fabric in quiltFabrics">
+    <article class="fabric quilt" ng-repeat="fabric in quiltFabrics">
       <img src="{{fabric.image}}" alt="{{fabric.title}}" />
       <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title | limitTo: 40}}</h3></a>
-      <div class="actions">
-        <a href="#/quilt/{{fabric._id}}">Set Quantity</a>    |
-        <a  ng-click = "removeQuiltFabric(fabric)" >
+      <div class="quiltActions">
+        <a class="addToQuilt" href="#/quilt/{{fabric._id}}">Set Quantity</a>    |
+        <a ng-click = "removeQuiltFabric(fabric)" >
           <i class="fa fa-trash"></i>
         </a>
       </div>

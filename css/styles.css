@@ -14,24 +14,24 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-nav {
+.nav-container {
   padding: 10px;
   background-color: #62BBC1;
   width: 100%;
   font-family: 'Julius Sans One', sans-serif;
   font-size: 1.5em; }
-  nav .brand {
+  .nav-container .brand {
     float: left;
     margin-top: 5px; }
-  nav .topNav, nav .bottomNav {
+  .nav-container .topNav, .nav-container .bottomNav {
     width: 85%;
     margin: auto;
     text-align: right; }
-  nav .nav-items {
+  .nav-container .nav-items {
     width: 75%;
     text-align: right;
     display: inline-block; }
-    nav .nav-items a {
+    .nav-container .nav-items a {
       list-style-type: none;
       font-size: .5em;
       display: inline-block;
@@ -60,7 +60,7 @@ nav {
   display: inline-block;
   vertical-align: top; }
 
-article {
+.fabric {
   text-align: left;
   height: 300px;
   padding: 10px;
@@ -84,16 +84,16 @@ a {
   text-decoration: none;
   color: black; }
 
-.actions {
+.actions, .quiltActions {
   padding: 5px;
   border: 1px solid black; }
-  .actions input {
+  .actions input, .quiltActions input {
     margin: 15px auto;
     display: block; }
-  .actions a {
+  .actions a, .quiltActions a {
     margin: 15px; }
 
-img {
+.fabric img {
   height: 173px;
   width: 173px; }
 
@@ -110,3 +110,12 @@ img {
 
 .fabicYardage {
   float: right; }
+
+.addToQuilt:hover {
+  font-size: 1.5em; }
+
+.quiltActions {
+  vertical-align: bottom; }
+
+.fabricName {
+  height: 40px; }
