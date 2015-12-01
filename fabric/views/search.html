@@ -10,25 +10,22 @@
 
     <div ng-if="fabricCtrl.etsyFabrics.length > 0" class="fabricList">
       <h2>Etsy Fabrics</h2>
-      <div quilt-fabric ng-repeat="fabric in fabricCtrl.etsyFabrics">
+      <quilt-fabric ng-repeat="fabric in fabricCtrl.etsyFabrics" fabric="fabric">
         <a class="addToQuilt" ng-click = "fabricCtrl.addEtsyFabricToQuilt(fabric)">
           <i class="fa fa-plus"></i>
           Add to Quilt
         </a>
-      </div>
+      </quilt-fabric>
     </div>
 
     <div ng-if="fabricCtrl.spoonflowerFabrics.length > 0"  class="fabricList">
       <h2>Spoonflower Fabrics</h2>
-      <article class="fabric" ng-repeat="fabric in fabricCtrl.spoonflowerFabrics" >
-        <img ng-src="{{fabric.thumbnail_url}}" alt="{{fabric.name}}" />
-        <h3 class="fabricName">{{fabric.name | limitTo: 45}}</h3>
-        <!-- <p class="description">{{fabric.short_description}}</p> -->
+      <quilt-fabric ng-repeat="fabric in fabricCtrl.spoonflowerFabrics" fabric="fabric">
         <a class="addToQuilt" ng-click = "fabricCtrl.addSpoonflowerFabricToQuilt(fabric)">
           <i class="fa fa-plus"></i>
           Add to Quilt
         </a>
-      </article>
+      </quilt-fabric>
     </div>
 
   </div>

@@ -1,13 +1,10 @@
 <div class="container">
   <div class="mainContent">
-    <article class="fabric" class="fabricDetail">
-      <img ng-src="{{quiltCtrl.fabric.image}}" alt="{{quiltCtrl.fabric.title}}" />
-      <a href="{{quiltCtrl.fabric.url}}"><h3 class="fabricName">{{quiltCtrl.fabric.title | limitTo: 45}}</h3></a>
-      <!-- <p class="description">{{fabric.description}}</p> -->
+    <quilt-fabric class="quilt" fabric="quiltCtrl.fabric">
       <a  ng-click = "quiltCtrl.removeQuiltFabric(quiltCtrl.fabric)" >
         <i class="fa fa-trash"></i>
       </a>
-    </article>
+    </quilt-fabric>
     <article class="fabricDetail">
       <div class="actions">
         <h4>All measurements are in inches, assuming 42 inch fabric width</h4>

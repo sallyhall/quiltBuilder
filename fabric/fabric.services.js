@@ -31,10 +31,15 @@
         });
       };
 
+      var findInQuilt = function(fabric, quiltFabrics){
+        return (_.where(quiltFabrics, {image:fabric.image}).length>0);
+      };
+
       return{
         searchEtsy: searchEtsy,
         searchSpoonflower: searchSpoonflower,
-        addFabricToQuilt: addFabricToQuilt
+        addFabricToQuilt: addFabricToQuilt,
+        findInQuilt: findInQuilt
       };
 
     });

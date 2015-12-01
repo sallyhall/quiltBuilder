@@ -5,7 +5,7 @@
     .directive('quiltFabric', function() {
       return {
         restrict: 'EA',
-        templateUrl: 'common/views/fabric.directive.html',
+        templateUrl: 'common/views/quiltfabric.directive.html',
         scope: {
           fabric: '=',
           action: '&'
