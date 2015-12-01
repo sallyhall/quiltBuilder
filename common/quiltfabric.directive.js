@@ -4,7 +4,7 @@
     .module('quiltBuilder')
     .directive('quiltFabric', function() {
       return {
-        restrict: 'EA',
+        restrict: 'E',
         templateUrl: 'common/views/quiltfabric.directive.html',
         scope: {
           fabric: '=',
