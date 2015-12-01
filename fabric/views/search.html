@@ -10,13 +10,12 @@
 
     <div ng-if="fabricCtrl.etsyFabrics.length > 0" class="fabricList">
       <h2>Etsy Fabrics</h2>
-      <banana-car ng-repeat="fabric in fabricCtrl.etsyFabrics" fabric="fabric"></banana-car>
-      <!-- <flickr-photo ng-repeat="photo in likesCtrl.likedPhotos" photo="photo"></flickr-photo> -->
-
-        <!-- <a class="addToQuilt" ng-click = "fabricCtrl.addEtsyFabricToQuilt(fabric)">
+      <div quilt-fabric ng-repeat="fabric in fabricCtrl.etsyFabrics">
+        <a class="addToQuilt" ng-click = "fabricCtrl.addEtsyFabricToQuilt(fabric)">
           <i class="fa fa-plus"></i>
           Add to Quilt
-        </a> -->
+        </a>
+      </div>
     </div>
 
     <div ng-if="fabricCtrl.spoonflowerFabrics.length > 0"  class="fabricList">
