@@ -10,7 +10,12 @@
           fabric: '=',
           action: '&'
         },
-        transclude: true
+        transclude: true,
+        link: function(scope, elem, attrs) {
+          elem.find("a").bind('click', function() {
+           elem.css('display', 'none');
+           });
+         }
       };
     });
 

@@ -5,7 +5,7 @@
     .module('fabric')
     .factory('FabricService',function ($http, _) {
 
-      var quiltUrl = "http://tiny-tiny.herokuapp.com/collections/quilt";
+      var quiltUrl = "http://quilt-builder.herokuapp.com/collections/quilt";
       var etsyUrl = function(searchTerm){
         return "https://openapi.etsy.com/v2/listings/active.js?includes=MainImage&api_key=eib9qc9hwzdss4dg26z6tpcb&category=Supplies/Fabric/Yardage&keywords="
                 + searchTerm

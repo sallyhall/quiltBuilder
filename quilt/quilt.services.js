@@ -5,7 +5,7 @@
     .module('quilt')
     .factory('QuiltService',function ($http, _) {
 
-      var url = "http://tiny-tiny.herokuapp.com/collections/quilt";
+      var url = "http://quilt-builder.herokuapp.com/collections/quilt";
 
       var getQuiltFabrics = function(){
         return $http.get(url);
