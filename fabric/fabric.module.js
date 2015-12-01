@@ -10,11 +10,11 @@
       $routeProvider
       .when('/fabric',{
         templateUrl:'fabric/views/search.html',
-        controller: 'FabricController'
+        controller: 'FabricController as fabricCtrl'
       })
       .when('/fabric/results', {
         templateUrl:'fabric/views/list.html',
-        controller: 'FabricController'
+        controller: 'FabricController as fabricCtrl'
       });
     });
 

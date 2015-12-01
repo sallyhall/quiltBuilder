@@ -4,35 +4,35 @@
   angular
     .module('quilt')
     .controller('QuiltController', function($scope, QuiltService, $routeParams){
-
+      var vm = this;
       var loadFabrics = function(){
         QuiltService.getQuiltFabrics().success(function(fabrics){
-          $scope.quiltFabrics = fabrics;
+          vm.quiltFabrics = fabrics;
           if($routeParams.fabricID){
-            $scope.fabric = QuiltService.getQuiltFabric($scope.quiltFabrics,$routeParams.fabricID);
+            vm.fabric = QuiltService.getQuiltFabric(vm.quiltFabrics,$routeParams.fabricID);
           }
         });
       };
 
       loadFabrics();
 
-      $scope.removeQuiltFabric = function(fabric){
+      vm.removeQuiltFabric = function(fabric){
         QuiltService.removeQuiltFabric(fabric).success(function(){
           loadFabrics();
         });
       };
 
-      $scope.calculateYardage = function(fabric, height, width, num){
+      vm.calculateYardage = function(fabric, height, width, num){
         fabric.yardage = QuiltService.calculateYardage(height, width, num);
         QuiltService.updateQuiltFabric(fabric);
-        $scope.width="";
-        $scope.height="";
-        $scope.num="";
+        vm.width="";
+        vm.height="";
+        vm.num="";
       };
 
-      $scope.clearQuilt = function(){
-        _.each($scope.quiltFabrics, function(fabric){
-          $scope.removeQuiltFabric(fabric);
+      vm.clearQuilt = function(){
+        _.each(vm.quiltFabrics, function(fabric){
+          vm.removeQuiltFabric(fabric);
         });
       };
 

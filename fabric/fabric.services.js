@@ -21,11 +21,15 @@
 
       var searchSpoonflower = function(keyword){
         return $http.get(spoonflowerUrl(keyword));
-      }
+      };
 
       var addFabricToQuilt = function (fabric) {
-        return $http.post(quiltUrl,fabric);
-      }
+        $http.get(quiltUrl).success(function(fabrics){
+          if (_.where(fabrics, {url:fabric.url}).length===0){
+            return $http.post(quiltUrl,fabric);
+          }
+        });
+      };
 
       return{
         searchEtsy: searchEtsy,

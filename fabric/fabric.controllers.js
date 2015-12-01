@@ -3,38 +3,41 @@
 
   angular
     .module('fabric')
-    .controller('FabricController', function($scope, FabricService, $routeParams, _){
-
-      $scope.search = function(keyword){
+    .controller('FabricController', function($scope, FabricService, QuiltService, $routeParams, _){
+      var vm = this;
+      QuiltService.getQuiltFabrics().success(function(fabrics){
+        vm.quiltFabrics = fabrics;
+      });
+      vm.search = function(keyword){
         FabricService.searchSpoonflower(keyword).success(function(fabrics){
-          $scope.spoonflowerFabrics = fabrics.results[0].results;
+          vm.spoonflowerFabrics = fabrics.results[0].results;
         });
         FabricService.searchEtsy(keyword).success(function(fabrics){
           _.each(fabrics.results, function(fabric){
             fabric.image = fabric.MainImage.url_170x135;
           });
-          $scope.etsyFabrics = fabrics.results;
+          vm.etsyFabrics = fabrics.results;
         });
-        $scope.keyword = "";
+        vm.keyword = "";
       }
-      $scope.searchEtsy = function (keyword) {
+      vm.searchEtsy = function (keyword) {
         FabricService.searchEtsy(keyword).success(function(fabrics){
           _.each(fabrics.results, function(fabric){
             fabric.image = fabric.MainImage.url_170x135;
           });
-          $scope.etsyFabrics = fabrics.results;
+          vm.etsyFabrics = fabrics.results;
         });
-        $scope.keyword = "";
+        vm.keyword = "";
       };
 
-      $scope.searchSpoonflower = function(keyword){
+      vm.searchSpoonflower = function(keyword){
         FabricService.searchSpoonflower(keyword).success(function(fabrics){
-          $scope.spoonflowerFabrics = fabrics.results[0].results;
+          vm.spoonflowerFabrics = fabrics.results[0].results;
         });
-        $scope.keyword = "";
+        vm.keyword = "";
       };
 
-      $scope.addSpoonflowerFabricToQuilt = function(fabric){
+      vm.addSpoonflowerFabricToQuilt = function(fabric){
         var newFabric = {
           title: fabric.name,
           image: fabric.thumbnail_url,
@@ -44,7 +47,7 @@
         FabricService.addFabricToQuilt(newFabric);
       };
 
-      $scope.addEtsyFabricToQuilt = function(fabric){
+      vm.addEtsyFabricToQuilt = function(fabric){
         var newFabric = {
           title: fabric.title,
           image: fabric.image,

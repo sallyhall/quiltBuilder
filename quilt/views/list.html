@@ -3,14 +3,14 @@
     <h2>Quilt Fabrics</h2>
     <div class="actions">
       <a href="#/quilt/shoppingList">View Shopping List</a>    |
-      <a href = "#/quilt/" ng-click = "clearQuilt()" >Remove all Fabrics from Quilt</a>
+      <a href = "#/quilt/" ng-click = "quiltCtrl.clearQuilt()" >Remove all Fabrics from Quilt</a>
     </div>
-    <article class="fabric quilt" ng-repeat="fabric in quiltFabrics">
-      <img src="{{fabric.image}}" alt="{{fabric.title}}" />
+    <article class="fabric quilt" ng-repeat="fabric in quiltCtrl.quiltFabrics">
+      <img ng-src="{{fabric.image}}" alt="{{fabric.title}}" />
       <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title | limitTo: 40}}</h3></a>
       <div class="quiltActions">
         <a class="addToQuilt" href="#/quilt/{{fabric._id}}">Set Quantity</a>    |
-        <a ng-click = "removeQuiltFabric(fabric)" >
+        <a ng-click = "quiltCtrl.removeQuiltFabric(fabric)" >
           <i class="fa fa-trash"></i>
         </a>
       </div>

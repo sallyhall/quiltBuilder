@@ -1,10 +1,10 @@
 <div class="container">
   <div class="mainContent">
     <article class="fabric" class="fabricDetail">
-      <img src="{{fabric.image}}" alt="{{fabric.title}}" />
-      <a href="{{fabric.url}}"><h3 class="fabricName">{{fabric.title | limitTo: 45}}</h3></a>
+      <img ng-src="{{quiltCtrl.fabric.image}}" alt="{{quiltCtrl.fabric.title}}" />
+      <a href="{{quiltCtrl.fabric.url}}"><h3 class="fabricName">{{quiltCtrl.fabric.title | limitTo: 45}}</h3></a>
       <!-- <p class="description">{{fabric.description}}</p> -->
-      <a  ng-click = "removeQuiltFabric(fabric)" >
+      <a  ng-click = "quiltCtrl.removeQuiltFabric(quiltCtrl.fabric)" >
         <i class="fa fa-trash"></i>
       </a>
     </article>
@@ -14,9 +14,9 @@
         <input type="text" name="width" ng-model="width" placeholder="Square Width">
         <input type="text" name="height" ng-model="height" placeholder="Square Height">
         <input type="text" name="num" ng-model="num" placeholder="Number of Squares">
-        <a ng-click = "calculateYardage(fabric, height, width, num)" name="calculateYardage">Calculate Yardage</a>
+        <a ng-click = "quiltCtrl.calculateYardage(quiltCtrl.fabric, height, width, num)" name="calculateYardage">Calculate Yardage</a>
       </div>
-      <h2 ng-if = "fabric.yardage" class="yardage">{{fabric.yardage}} Yards Needed</h2>
+      <h2 ng-if = "quiltCtrl.fabric.yardage" class="yardage">{{quiltCtrl.fabric.yardage}} Yards Needed</h2>
     </article>
 
   </div>

@@ -10,15 +10,15 @@
       $routeProvider
       .when('/quilt',{
         templateUrl:'quilt/views/list.html',
-        controller: 'QuiltController'
+        controller: 'QuiltController as quiltCtrl'
       })
       .when('/quilt/shoppingList',{
         templateUrl: 'quilt/views/shoppingList.html',
-        controller: 'QuiltController'
+        controller: 'QuiltController as quiltCtrl'
       })
       .when('/quilt/:fabricID',{
         templateUrl: 'quilt/views/detail.html',
-        controller: 'QuiltController'
+        controller: 'QuiltController as quiltCtrl'
       });
     });
 
