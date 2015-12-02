@@ -5,13 +5,8 @@
       <a href="#/quilt/shoppingList">View Shopping List</a>    |
       <a href = "#/quilt/" ng-click = "quiltCtrl.clearQuilt()" >Remove all Fabrics from Quilt</a>
     </div>
-    <quilt-fabric class="quilt"  ng-repeat="fabric in quiltCtrl.quiltFabrics" fabric="fabric">
-      <div class="quiltActions">
-        <a class="addToQuilt" href="#/quilt/{{fabric._id}}">Set Quantity</a>    |
-        <a ng-click = "quiltCtrl.removeQuiltFabric(fabric)" >
-          <i class="fa fa-trash"></i>
-        </a>
-      </div>
+    <quilt-fabric class="quilt"  ng-repeat="fabric in quiltCtrl.quiltFabrics" fabric="fabric" action=quiltCtrl.removeQuiltFabric(fabric) icon="<i class='fa fa-trash'></i>">
+      | <a class="addToQuilt" href="#/quilt/{{fabric._id}}">Set Quantity</a>
     </quilt-fabric>
   </div>
 </div>

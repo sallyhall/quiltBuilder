@@ -10,21 +10,13 @@
 
     <div ng-if="fabricCtrl.etsyFabrics.length > 0" class="fabricList">
       <h2>Etsy Fabrics</h2>
-      <quilt-fabric ng-repeat="fabric in fabricCtrl.etsyFabrics" fabric="fabric">
-        <a class="addToQuilt" ng-click = "fabricCtrl.addEtsyFabricToQuilt(fabric)">
-          <i class="fa fa-plus"></i>
-          Add to Quilt
-        </a>
+      <quilt-fabric ng-repeat="fabric in fabricCtrl.etsyFabrics" fabric="fabric" actiontext="Add to Quilt" action=fabricCtrl.addEtsyFabricToQuilt(fabric) icon = "<i class='fa fa-plus'></i>">
       </quilt-fabric>
     </div>
 
     <div ng-if="fabricCtrl.spoonflowerFabrics.length > 0"  class="fabricList">
       <h2>Spoonflower Fabrics</h2>
-      <quilt-fabric ng-repeat="fabric in fabricCtrl.spoonflowerFabrics" fabric="fabric">
-        <a class="addToQuilt" ng-click = "fabricCtrl.addSpoonflowerFabricToQuilt(fabric)">
-          <i class="fa fa-plus"></i>
-          Add to Quilt
-        </a>
+      <quilt-fabric ng-repeat="fabric in fabricCtrl.spoonflowerFabrics" fabric="fabric" actiontext="Add to Quilt"action=fabricCtrl.addSpoonflowerFabricToQuilt(fabric) icon = "<i class='fa fa-plus'></i>">
       </quilt-fabric>
     </div>
 

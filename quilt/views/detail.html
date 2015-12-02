@@ -1,9 +1,6 @@
 <div class="container">
   <div class="mainContent">
-    <quilt-fabric class="quilt" fabric="quiltCtrl.fabric">
-      <a  ng-click = "quiltCtrl.removeQuiltFabric(quiltCtrl.fabric)" >
-        <i class="fa fa-trash"></i>
-      </a>
+    <quilt-fabric class="quilt" fabric="quiltCtrl.fabric" actiontext="Remove from Quilt" action=quiltCtrl.removeQuiltFabric(quiltCtrl.fabric)>
     </quilt-fabric>
     <article class="fabricDetail">
       <div class="actions">

@@ -1,7 +1,12 @@
 <article class="fabric" data-id="{{fabric._id}}">
   <img ng-src="{{fabric.image}}" alt="{{fabric.title}}" />
   <h3 class="fabricName">{{fabric.title | limitTo: 45}}</h3>
-  <div ng-transclude>
+  <div class="quiltActions">
+    <a class="addToQuilt" ng-click = "action()">
+      {{actiontext}}
+    </a>
+    <span ng-transclude>
 
+    </span>
   </div>
 </article>
